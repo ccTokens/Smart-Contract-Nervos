@@ -1,0 +1,16 @@
+[package]
+name = "tick-cell-type"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# workspace crates
+contract-core = { workspace = true }
+types = { workspace = true, features = ["no_std"] }
+# ckb crates
+ckb-std =  { workspace = true }
+# third party crates
+thiserror-no-std = { workspace = true }
+hex = { workspace = true }

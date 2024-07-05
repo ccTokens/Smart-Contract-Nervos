@@ -1,0 +1,32 @@
+# [rust]
+# # path of rust contracts workspace directory,
+# # a `Cargo.toml` file is expected under the directory.
+# workspace_dir = "."
+
+# capsule version
+version = "0.10.4"
+
+[[contracts]]
+name = "governance-member-cell-type"
+template_type = "Rust"
+
+[[contracts]]
+name = "config-cell-type"
+template_type = "Rust"
+
+[[contracts]]
+name = "tick-cell-type"
+template_type = "Rust"
+
+[[contracts]]
+name = "always-success"
+template_type = "Rust"
+
+[[contracts]]
+name = "xudt_owner.so"
+template_type = "C"
+
+[[contracts]]
+name = "xudt_extension.so"
+template_type = "C"
+

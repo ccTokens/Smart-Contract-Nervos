@@ -1,0 +1,13 @@
+[package]
+name = "contract-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# workspace crates
+types = { workspace = true }
+# ckb crates
+ckb-std =  { workspace = true }
+# third party crates
+thiserror-no-std = { workspace = true }
+hex = { workspace = true }

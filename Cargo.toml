@@ -1,0 +1,42 @@
+[workspace]
+package.authors = ["Link <link@d.id>"]
+package.edition = "2021"
+package.license = "MIT"
+resolver = "2"
+members = [
+    "libs/types",
+    "libs/core",
+    "tests",
+    "contracts/governance-member-cell-type",
+    "contracts/config-cell-type",
+    "contracts/tick-cell-type", "contracts/always-success",
+]
+
+[workspace.dependencies]
+# workspace crates
+types = { path = "libs/types", default-features = false }
+contract-core = { path = "libs/core" }
+# ckb crates
+ckb-std = "0.15.3"
+ckb-types = { version = "=0.114.0" }
+molecule = { version = "0.7", default-features = false }
+# third party crates
+blake2b-rs = { version = "0.2" }
+blake2b-ref = { version = "0.3" }
+hex = { version = "0.4.2", default-features = false, features = ["alloc"]}
+thiserror = { version = "1.0" }
+thiserror-no-std = { version = "=2.0.2", default-features = false }
+anyhow = { version = "1.0", default-features = false }
+strum = { version = "0.26", features = ["derive"], default-features = false }
+num_enum = { version = "0.7.1", default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+dotenvy = { version = "0.15" }
+primitive-types = { version = "0.12.2", default-features = false }
+
+[profile.release]
+overflow-checks = true
+strip = true
+opt-level = 's'
+lto = false
+codegen-units = 1
